@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FormsComponent } from './shared/components/forms/forms.component';
-import { LoginComponent } from './shared/pages/login/login.component';
-import { HomeComponent } from './shared/pages/home/home.component';
-import { AdminComponent } from './shared/pages/admin/admin.component';
+import { LoginComponent } from './modules/login/login.component';
+import { HomeComponent } from './modules/home/home.component';
+import { AdminComponent } from './modules/admin/admin.component';
+import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AdminComponent } from './shared/pages/admin/admin.component';
     LoginComponent,
     HomeComponent,
     AdminComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

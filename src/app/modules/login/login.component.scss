@@ -1,0 +1,38 @@
+.bg-login {
+    background: linear-gradient(97deg, #1A3636 46.5%, #FFDE4D 46.5%);
+}
+
+.btn-login-button {
+    background-color: #1A3636;
+}
+
+.bi-bank2 {
+    color: #FFDE4D;
+    font-size: 15rem;
+}
+
+.link-login {
+    color: #1b5555;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    transition: all ease-in .20s;
+}
+
+.link-login:hover {
+    color: #3e9494;
+}
+
+.question-label {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.titulo-label {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 3rem;
+}
