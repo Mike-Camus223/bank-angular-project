@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ɵgetAsyncClassMetadataFn } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './modules/login/login.component';
-import { HomeComponent } from './modules/home/home.component';
-import { AdminComponent } from './modules/admin/admin.component';
+import { LoginComponent } from './features/auth/login/login.component';
+import { HomeComponent } from './features/home/home.component';
+import { AdminComponent } from './features/admin/admin.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -16,3 +16,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+

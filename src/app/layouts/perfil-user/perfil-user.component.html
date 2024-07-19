@@ -1,0 +1,19 @@
+<div class="container-fluid bg-danger d-flex hh-25">
+    <div class="perfil-container container w-50 d-flex justify-content-start align-items-center">
+      <div class="d-flex align-items-center gap-4" *ngFor="let user of PerfilWelcome" >
+        <div class="user-img-welcome w-20 d-flex justify-content-center align-items-center bg-danger">
+          <img [src]="user.perfilphoto" class="perfil-imagen" alt="">          
+        </div>
+        <div class="row-6 d-flex flex-column gap-1">
+          <h5 class="nunito text-white fs-3 fw-medium">Bienvenido de nuevo, {{user.name}}!</h5>
+          <p class="nunito text-white fs-4 fw-medium">{{user.description}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="perfil-container container w-50 d-flex justify-content-center align-items-center">
+      <div class="d-flex flex-column gap-3" *ngFor="let user of PerfilWelcome">
+        <h5 class="nunito text-white fs-4 fw-medium">Saldo total</h5> 
+        <p class="nunito text-white fs-1 fw-medium">${{user.balance}}</p>
+      </div>
+    </div>
+</div>
