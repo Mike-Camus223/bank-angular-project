@@ -10,7 +10,12 @@ import { AdminComponent } from './features/admin/admin.component';
 import { SidebarComponent } from './layouts/sidebar/sidebar.component';
 import { AccountSumaryComponent } from './features/account-sumary/account-sumary.component';
 import { PerfilUserComponent } from './layouts/perfil-user/perfil-user.component';
-import { AuthModule } from './features/auth/auth.module';
+import { AllAccountsSecComponent } from './layouts/all-accounts-sec/all-accounts-sec.component';
+import { RegisterComponent } from './features/auth/register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MultistepFormComponent } from './shared/components/multistep-form/multistep-form.component';
+import { UserService } from './core/services/user.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,12 +27,17 @@ import { AuthModule } from './features/auth/auth.module';
     SidebarComponent,
     AccountSumaryComponent,
     PerfilUserComponent,
+    AllAccountsSecComponent,
+    RegisterComponent,
+    MultistepFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

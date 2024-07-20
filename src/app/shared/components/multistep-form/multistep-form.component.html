@@ -1,0 +1,51 @@
+<div class="container multi p-4 bg-white rounded form-box">
+    <form [formGroup]="userForm" class="d-flex flex-column gap-2" *ngIf="currentStep === 1">
+        <div class="form-group d-flex flex-column gap-3">
+            <label for="name" class="nunito fs-4 fw-medium">Nombre</label>
+            <input id="name" formControlName="name" class="form-control nunito fs-4 fw-medium" />
+        </div>
+        <div class="form-group d-flex flex-column gap-3">
+            <label for="surname" class="nunito fs-4 fw-medium">Apellido</label>
+            <input id="surname" formControlName="surname" class="form-control nunito fs-4 fw-medium" />
+        </div>
+        <div class="form-group d-flex flex-column gap-3">
+            <label for="dob" class="nunito fs-4 fw-medium">Fecha de Nacimiento</label>
+            <input id="dob" formControlName="dob" type="date" class="form-control nunito fs-4 fw-medium" />
+        </div>
+        <button type="button" (click)="nextStep()" class="btn button-form rounded nunito">Siguiente</button>
+    </form>
+
+    <form [formGroup]="credentialsForm" *ngIf="currentStep === 2">
+        <div class="form-group d-flex flex-column gap-3">
+            <label for="email" class="nunito fs-4 fw-medium">Email</label>
+            <input id="email" formControlName="email" class="form-control nunito fs-4 fw-medium" />
+        </div>
+        <div class="form-group d-flex flex-column gap-3">
+            <label for="password" class="nunito fs-4 fw-medium">Contraseña</label>
+            <input id="password" formControlName="password" type="password"
+                class="form-control nunito fs-4 fw-medium" />
+        </div>
+        <div class="d-flex justify-content-start gap-3">
+            <button type="button" (click)="previousStep()" class="btn button-form2 rounded nunito">Anterior</button>
+            <button type="button" (click)="nextStep()" class="btn button-form2 rounded nunito">Siguiente</button>
+        </div>
+    </form>
+
+    <form [formGroup]="confirmationForm" *ngIf="currentStep === 3">
+        <div class="alert alert-info" role="alert">
+            <p class="nunito fs-4 fw-medium"><strong>Revisa tu Información</strong></p>
+            <p class="nunito fs-4 fw-medium">Nombre: {{ userForm.value.name }}</p>
+            <p class="nunito fs-4 fw-medium">Apellido: {{ userForm.value.surname }}</p>
+            <p class="nunito fs-4 fw-medium">Fecha de Nacimiento: {{ userForm.value.dob | date }}</p>
+            <p class="nunito fs-4 fw-medium">Email: {{ credentialsForm.value.email }}</p>
+        </div>
+        <div class="form-check">
+            <input id="terms" formControlName="terms" type="checkbox" class="form-check-input" />
+            <label for="terms" class="form-check-label nunito fs-4 fw-medium py-2">Acepto los términos y condiciones</label>
+        </div>
+        <div class="d-flex justify-content-start gap-3">
+            <button type="button" (click)="previousStep()" class="btn button-form2 rounded nunito">Anterior</button>
+            <button type="button" (click)="submit()" class="btn button-form2 rounded nunito">Enviar</button>
+        </div>
+    </form>
+</div>
